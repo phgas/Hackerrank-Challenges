@@ -7,11 +7,11 @@ def breakingRecords(scores: list) -> list:
     :return: A list with two integers: [Number of times the highest record was broken, Number of times the lowest record was broken].
     """
 
-    # Time complexity: O(n), where n is the number of elements in scores
     min_score = scores[0]
     max_score = scores[0]
     records = [0, 0]
 
+    # Time complexity: O(n), where n is the number of elements in scores
     for score in scores:
         if score < min_score:
             records[1] += 1
