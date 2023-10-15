@@ -1,4 +1,4 @@
-def birthday(s: list(int), d: int, m: int) -> int:
+def birthday(s: list, d: int, m: int) -> int:
     """
     This function takes a list of integers representing chocolate squares in segments,
     a birthday day, and a birthday month as input. It calculates and returns the number
