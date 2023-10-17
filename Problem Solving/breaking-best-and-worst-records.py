@@ -11,7 +11,7 @@ def breakingRecords(scores: list) -> list:
     max_score = scores[0]
     records = [0, 0]
 
-    # Time complexity: O(n), where n is the number of elements in scores
+    # Time complexity: O(n), where n equals to the number of elements in scores
     for score in scores:
         if score < min_score:
             records[1] += 1
@@ -22,6 +22,6 @@ def breakingRecords(scores: list) -> list:
 
     return records
 
-
-scores = [12, 24, 10, 24]
-print(breakingRecords(scores))
+if __name__ == "__main__":
+    scores = [12, 24, 10, 24]
+    print(breakingRecords(scores))

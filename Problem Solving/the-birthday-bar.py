@@ -13,7 +13,7 @@ def birthday(s: list, d: int, m: int) -> int:
 
     possibilities_counter = 0
 
-    # Time complexity: O(n), where n is the number of elements in the input list s
+    # Time complexity: O(n), where n equals to the number of elements in the input list s
     for end_index in range(m, len(s) + 1):
         sub_segment = s[end_index - m:end_index]
         if sum(sub_segment) == d and len(sub_segment) == m:
@@ -22,7 +22,8 @@ def birthday(s: list, d: int, m: int) -> int:
     return possibilities_counter
 
 
-s = [2, 2, 1, 3, 2]
-d = 4
-m = 2
-print(birthday(s, d, m))
+if __name__ == "__main__":
+    s = [2, 2, 1, 3, 2]
+    d = 4
+    m = 2
+    print(birthday(s, d, m))
