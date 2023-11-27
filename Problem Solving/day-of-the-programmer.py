@@ -7,22 +7,25 @@ def dayOfProgrammer(year: int) -> str:
     :return: Date in the format dd.mm.yyyy. (string)
     """
 
+    # Time complexity: O
+
+    # Transition year
     if year == 1918:
         formatted_date = "26.09.1918"
 
-    # Julian  calendar
+    # Julian calendar
     elif year < 1918:
         if year % 4 == 0:
-            return f"12.09.{year}"  # Leap year
+            formatted_date = f"12.09.{year}"  # Leap year
         else:
-            return f"13.09.{year}"  # Non-leap year
+            formatted_date = f"13.09.{year}"  # Non-leap year
 
     # Gregorian calendar
     else:
         if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
-            return f"12.09.{year}"  # Leap year
+            formatted_date = f"12.09.{year}"  # Leap year
         else:
-            return f"13.09.{year}"  # Non-leap year
+            formatted_date = f"13.09.{year}"  # Non-leap year
 
     return formatted_date
 
